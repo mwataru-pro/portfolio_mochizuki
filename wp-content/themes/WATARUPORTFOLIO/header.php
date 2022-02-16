@@ -23,6 +23,7 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	<meta charset="UTF-8" />
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link rel="icon" href="<?php esc_url(get_theme_file_uri('/assets/img/favicon.ico')); ?>" />
 	<script src="https://kit.fontawesome.com/b590762531.js" crossorigin="anonymous"></script>
 	<?php add_theme_support('title-tag'); ?>
 	<?php wp_head(); ?>
