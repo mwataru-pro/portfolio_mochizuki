@@ -16,4 +16,86 @@ get_header();
 		<div class="c-fluid"></div>
 	</div>
 </div>
+<main class="l-main">
+	<section class="p-about">
+		<div class="p-about__inner">
+			<div class="c-headline">
+				<h2 class="c-headline__title">ABOUT THIS SITE</h2>
+				<p class="c-headline__subtitle">このさいとについて</p>
+			</div>
+			<p class="p-about__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+		</div>
+	</section>
+	<section class="p-profile">
+		<div class="p-profile__inner">
+			<div class="c-headline">
+				<h2 class="c-headline__title">PROFILE</h2>
+				<p class="c-headline__subtitle">プロフィール</p>
+			</div>
+			<div class="p-profile__content">
+				<figure class="p-profile__image-wrap u-smooth-trigger">
+					<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/profile-gray.png')); ?>" alt="望月亘">
+				</figure>
+				<div class="p-profile__text-wrap">
+					<p class="p-profile__name">
+						Mochizuki Watatu <span class="u-fontsize-s">望月 亘<span></p>
+					<p class="p-profile__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="p-works">
+		<div class="p-works__inner">
+			<div class="c-headline">
+				<h2 class="c-headline__title">WORKS</h2>
+				<p class="c-headline__subtitle">制作実績</p>
+			</div>
+			<ul class="p-works__cards">
+				<li class="p-works__card">
+					<a href="" class="p-works__thumbnail">
+					<span class="c-link-mask">
+						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
+						<span class="c-link-mask__caption">実績タイトル</span>
+					</span>
+					</a>
+				</li>
+				<li class="p-works__card">
+					<a href="" class="p-works__thumbnail">
+					<span class="c-link-mask">
+						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
+						<span class="c-link-mask__caption">実績タイトル</span>
+					</span>
+					</a>
+				</li>
+				<li class="p-works__card">
+					<a href="" class="p-works__thumbnail">
+					<span class="c-link-mask">
+						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
+						<span class="c-link-mask__caption">実績タイトル</span>
+					</span>
+					</a>
+				</li>
+			</ul>
+			<p class="p-works__button-wrap">
+				<a href="" class="p-works__button c-button">制作実績一覧へ</a>
+			</p>
+		</div>
+	</section>
+	<section class="p-skill">
+		<div class="p-skill__inner">
+			<div class="c-headline">
+				<h2 class="c-headline__title">SKILL</h2>
+				<p class="c-headline__subtitle">スキル</p>
+			</div>
+		</div>
+	</section>
+	<section class="p-contact">
+		<div class="p-contact__inner">
+			<div class="c-headline">
+				<h2 class="c-headline__title">CONTACT</h2>
+				<p class="c-headline__subtitle">お問い合わせ</p>
+			</div>
+		</div>
+	</section>
+</main>
 <?php get_footer(); ?>
