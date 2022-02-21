@@ -25,4 +25,23 @@ jQuery(function () {
 		init();
 	}
 	controlNav();
+
+	function fadeAnimation() {
+		$('.u-smooth-trigger').each(function() {
+			const elementPosition = $(this).offset().top-50;
+			const scroll = $(window).scrollTop();
+			const windowHeight = $(window).height();
+			if (scroll >= elementPosition - windowHeight){
+				$(this).addClass('u-smooth');
+			}
+		});
+	}
+
+	$(window).scroll(function (){
+		fadeAnimation();
+	});
+
+	$(window).on('load', function(){
+		fadeAnimation();
+	});
 });
