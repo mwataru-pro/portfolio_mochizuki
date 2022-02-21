@@ -44,31 +44,31 @@ get_header();
 			</div>
 		</div>
 	</section>
-	<section class="p-works">
-		<div class="p-works__inner">
+	<section class="p-top-works">
+		<div class="p-top-works__inner">
 			<div class="c-headline">
 				<h2 class="c-headline__title">WORKS</h2>
 				<p class="c-headline__subtitle">制作実績</p>
 			</div>
-			<ul class="p-works__cards">
-				<li class="p-works__card">
-					<a href="" class="p-works__thumbnail">
+			<ul class="p-top-works__cards">
+				<li class="p-top-works__card">
+					<a href="" class="p-top-works__thumbnail">
 					<span class="c-link-mask">
 						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
 						<span class="c-link-mask__caption">実績タイトル</span>
 					</span>
 					</a>
 				</li>
-				<li class="p-works__card">
-					<a href="" class="p-works__thumbnail">
+				<li class="p-top-works__card">
+					<a href="" class="p-top-works__thumbnail">
 					<span class="c-link-mask">
 						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
 						<span class="c-link-mask__caption">実績タイトル</span>
 					</span>
 					</a>
 				</li>
-				<li class="p-works__card">
-					<a href="" class="p-works__thumbnail">
+				<li class="p-top-works__card">
+					<a href="" class="p-top-works__thumbnail">
 					<span class="c-link-mask">
 						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
 						<span class="c-link-mask__caption">実績タイトル</span>
@@ -76,8 +76,8 @@ get_header();
 					</a>
 				</li>
 			</ul>
-			<p class="p-works__button-wrap">
-				<a href="" class="p-works__button c-button">制作実績一覧へ</a>
+			<p class="p-top-works__button-wrap">
+				<a href="" class="p-top-works__button c-button">制作実績一覧へ</a>
 			</p>
 		</div>
 	</section>
@@ -89,8 +89,8 @@ get_header();
 			</div>
 		</div>
 	</section>
-	<section class="p-contact">
-		<div class="p-contact__inner">
+	<section class="p-top-contact">
+		<div class="p-top-contact__inner">
 			<div class="c-headline">
 				<h2 class="c-headline__title">CONTACT</h2>
 				<p class="c-headline__subtitle">お問い合わせ</p>
