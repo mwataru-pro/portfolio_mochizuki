@@ -22,6 +22,8 @@ function my_script_init() {
 	if (!is_admin()) {
 		wp_deregister_script('jquery');
 		wp_enqueue_script('3.6.0', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js');
+		wp_enqueue_script('vivus', get_template_directory_uri() . '/assets/js/vivus.min.js', array(), false);
+		wp_enqueue_script('pathformer', get_template_directory_uri() . '/assets/js/pathformer.js', array(), false);
 	}
 	wp_enqueue_script('index', get_template_directory_uri() . '/assets/js/index.js', array('3.6.0'), false);
 }
@@ -42,10 +44,24 @@ function set_global_menu() {
 	));
 }
 
+function my_wp_mail_smtp_custom_options ( $phpmailer ) {
+	if ( isset( $phpmailer->SMTPAuth ) ) {
+		if ( $phpmailer->SMTPAuth == true ) {
+			$phpmailer->SMTPOptions = array('ssl' =>
+			array(
+				'verify_peer' => false,
+				'verify_peer_name' => false,
+				'allow_self_signed' => true));
+			}
+		}
+		return $phpmailer;
+}
+
 function hooks() {
 	add_action('after_setup_theme', 'my_setup');
 	add_action('wp_enqueue_scripts', 'my_script_init');
 	add_filter('nav_menu_link_attributes', 'add_class', 10, 3);
+	add_filter("wp_mail_smtp_custom_options", "my_wp_mail_smtp_custom_options");
 }
 
 function init() {
