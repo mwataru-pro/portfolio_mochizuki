@@ -57,6 +57,19 @@ function my_wp_mail_smtp_custom_options ( $phpmailer ) {
 		return $phpmailer;
 }
 
+function sub_loop($number) {
+	$my_query = new WP_Query(
+		array(
+		'post_type' => 'work',
+		'post_status' => 'publish',
+		'posts_per_page' => $number,
+		'order' => 'ASC',
+		'orderby' => 'date'
+		)
+	);
+	return $my_query;
+}
+
 function hooks() {
 	add_action('after_setup_theme', 'my_setup');
 	add_action('wp_enqueue_scripts', 'my_script_init');
