@@ -19,7 +19,7 @@ get_header();
 <main class="l-main">
 	<section id="about-site" class="p-about">
 		<div class="p-about__inner">
-			<div class="c-headline u-smooth-trigger">
+			<div class="p-about__headline c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">ABOUT THIS SITE</h2>
 				<p class="c-headline__subtitle">このさいとについて</p>
 			</div>
@@ -28,7 +28,7 @@ get_header();
 	</section>
 	<section id="profile" class="p-profile">
 		<div class="p-profile__inner">
-			<div class="c-headline u-smooth-trigger">
+			<div class="p-profile__headline c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">PROFILE</h2>
 				<p class="c-headline__subtitle">プロフィール</p>
 			</div>
@@ -46,7 +46,7 @@ get_header();
 	</section>
 	<section class="p-top-works">
 		<div class="p-top-works__inner">
-			<div class="c-headline u-smooth-trigger">
+			<div class="p-top-works__headline c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">WORKS</h2>
 				<p class="c-headline__subtitle">制作実績</p>
 			</div>
@@ -76,13 +76,13 @@ get_header();
 					<?php wp_reset_postdata(); endif; ?>
 			</ul>
 			<p class="p-top-works__button-wrap u-smooth-trigger">
-				<a href="<?php echo get_post_type_archive_link( '制作実績' ); ?>" class="p-top-works__button c-button">制作実績一覧へ</a>
+				<a href="<?php echo get_post_type_archive_link( 'work' ); ?>" class="p-top-works__button c-button">制作実績一覧へ</a>
 			</p>
 		</div>
 	</section>
 	<section id="skill" class="p-skill">
 		<div class="p-skill__inner">
-			<div class="c-headline u-smooth-trigger">
+			<div class="p-skill__headline c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">SKILL</h2>
 				<p class="c-headline__subtitle">スキル</p>
 			</div>
@@ -164,10 +164,17 @@ get_header();
 	</section>
 	<section class="p-top-contact">
 		<div class="p-top-contact__inner">
-			<div class="c-headline u-smooth-trigger">
+			<div class="p-top-contact__headline c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">CONTACT</h2>
 				<p class="c-headline__subtitle">お問い合わせ</p>
 			</div>
+			<p class="p-top-contact__text">
+				下記フォームより、<br>
+				お気軽にお問い合わせください。
+			</p>
+			<p class="p-top-contact__button-wrap u-smooth-trigger">
+				<a href="<?php echo home_url('contact-form'); ?>" class="p-top-contact__button c-button">お問い合わせフォーム</a>
+			</p>
 		</div>
 	</section>
 </main>

@@ -9,7 +9,7 @@
 		<?php $my_query = sub_loop(6);
 		if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
 			<li class="p-work-card u-smooth-trigger">
-				<a href="" class="p-work-card__thumbnail">
+				<a href="<?php the_permalink(); ?>" class="p-work-card__thumbnail">
 					<span class="c-link-mask">
 					<?php $work_thumbnail = get_field('work-thumbnail');
 					if($work_thumbnail){
