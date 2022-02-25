@@ -17,7 +17,7 @@ get_header();
 	</div>
 </div>
 <main class="l-main">
-	<section class="p-about">
+	<section id="about-site" class="p-about">
 		<div class="p-about__inner">
 			<div class="c-headline">
 				<h2 class="c-headline__title">ABOUT THIS SITE</h2>
@@ -26,7 +26,7 @@ get_header();
 			<p class="p-about__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 		</div>
 	</section>
-	<section class="p-profile">
+	<section id="profile" class="p-profile">
 		<div class="p-profile__inner">
 			<div class="c-headline">
 				<h2 class="c-headline__title">PROFILE</h2>
@@ -38,7 +38,7 @@ get_header();
 				</figure>
 				<div class="p-profile__text-wrap">
 					<p class="p-profile__name">
-						Mochizuki Watatu <span class="u-fontsize-s">望月 亘<span></p>
+						Mochizuki Watatu <span class="p-profile__kana">望月 亘<span></p>
 					<p class="p-profile__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 				</div>
 			</div>
@@ -50,34 +50,33 @@ get_header();
 				<h2 class="c-headline__title">WORKS</h2>
 				<p class="c-headline__subtitle">制作実績</p>
 			</div>
-			<ul class="p-top-works__cards">
-				<li class="p-top-works__card">
-					<a href="" class="p-top-works__thumbnail">
+			<ul class="p-work-cards p-top-works__list">
+			<?php $my_query = sub_loop(3);
+			if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
+				<li class="p-work-card p-top-works__card">
+				<a href="" class="p-work-card__thumbnail">
 					<span class="c-link-mask">
-						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
-						<span class="c-link-mask__caption">実績タイトル</span>
+					<?php $work_thumbnail = get_field('work-thumbnail');
+					if($work_thumbnail){
+						?>
+						<figure>
+							<img
+							src="<?php echo esc_url($work_thumbnail['url']) ?>"
+							alt="<?php echo esc_attr($work_thumbnail['alt']) ?>"
+							>
+						</figure>
+						<?php } ?>
+						<span class="c-link-mask__caption"><?php echo get_field('work-name'); ?></span>
 					</span>
-					</a>
+				</a>
 				</li>
-				<li class="p-top-works__card">
-					<a href="" class="p-top-works__thumbnail">
-					<span class="c-link-mask">
-						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
-						<span class="c-link-mask__caption">実績タイトル</span>
-					</span>
-					</a>
-				</li>
-				<li class="p-top-works__card">
-					<a href="" class="p-top-works__thumbnail">
-					<span class="c-link-mask">
-						<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/test-img.png')); ?>" alt="">
-						<span class="c-link-mask__caption">実績タイトル</span>
-					</span>
-					</a>
-				</li>
+				<?php endwhile; ?>
+				<?php else : ?>
+					<li>記事がありません</li>
+					<?php wp_reset_postdata(); endif; ?>
 			</ul>
 			<p class="p-top-works__button-wrap">
-				<a href="" class="p-top-works__button c-button">制作実績一覧へ</a>
+				<a href="<?php echo get_post_type_archive_link( '制作実績' ); ?>" class="p-top-works__button c-button">制作実績一覧へ</a>
 			</p>
 		</div>
 	</section>
