@@ -26,7 +26,7 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	<?php if ( is_page('contact-complete') ): ?>
 		<meta http-equiv="refresh" content=" 5; url=<?php echo esc_url(home_url()); ?>">
 	<?php endif; ?>
-	<link rel="icon" href="<?php esc_url(get_theme_file_uri('/assets/img/favicon.ico')); ?>" />
+	<link rel="icon" href="<?php echo esc_url(get_theme_file_uri('/assets/img/favicon.ico')); ?>" />
 	<script src="https://kit.fontawesome.com/b590762531.js" crossorigin="anonymous"></script>
 	<?php add_theme_support('title-tag'); ?>
 	<?php wp_head(); ?>
