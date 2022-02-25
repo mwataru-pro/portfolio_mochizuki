@@ -9,8 +9,8 @@ get_header();
 ?>
 <div id="first-view" class="p-first-view">
 	<div class="p-first-view__inner">
-		<h2 class="p-first-view__title">WATARU PORTFOLIO</h2>
-		<p class="p-first-view__image">
+		<h2 class="p-first-view__title u-smooth-trigger">WATARU PORTFOLIO</h2>
+		<p class="p-first-view__image u-smooth-trigger">
 			<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/first-view1.png')); ?>" alt="man illust">
 		</p>
 		<div class="c-fluid"></div>
@@ -19,16 +19,16 @@ get_header();
 <main class="l-main">
 	<section id="about-site" class="p-about">
 		<div class="p-about__inner">
-			<div class="c-headline">
+			<div class="c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">ABOUT THIS SITE</h2>
 				<p class="c-headline__subtitle">このさいとについて</p>
 			</div>
-			<p class="p-about__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+			<p class="p-about__text u-smooth-trigger">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 		</div>
 	</section>
 	<section id="profile" class="p-profile">
 		<div class="p-profile__inner">
-			<div class="c-headline">
+			<div class="c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">PROFILE</h2>
 				<p class="c-headline__subtitle">プロフィール</p>
 			</div>
@@ -37,23 +37,23 @@ get_header();
 					<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/profile-gray.png')); ?>" alt="望月亘">
 				</figure>
 				<div class="p-profile__text-wrap">
-					<p class="p-profile__name">
+					<p class="p-profile__name u-smooth-trigger">
 						Mochizuki Watatu <span class="p-profile__kana">望月 亘<span></p>
-					<p class="p-profile__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+					<p class="p-profile__text u-smooth-trigger">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="p-top-works">
 		<div class="p-top-works__inner">
-			<div class="c-headline">
+			<div class="c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">WORKS</h2>
 				<p class="c-headline__subtitle">制作実績</p>
 			</div>
 			<ul class="p-work-cards p-top-works__list">
 			<?php $my_query = sub_loop(3);
 			if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
-				<li class="p-work-card p-top-works__card">
+				<li class="p-work-card p-top-works__card u-smooth-trigger">
 				<a href="" class="p-work-card__thumbnail">
 					<span class="c-link-mask">
 					<?php $work_thumbnail = get_field('work-thumbnail');
@@ -75,19 +75,19 @@ get_header();
 					<li>記事がありません</li>
 					<?php wp_reset_postdata(); endif; ?>
 			</ul>
-			<p class="p-top-works__button-wrap">
+			<p class="p-top-works__button-wrap u-smooth-trigger">
 				<a href="<?php echo get_post_type_archive_link( '制作実績' ); ?>" class="p-top-works__button c-button">制作実績一覧へ</a>
 			</p>
 		</div>
 	</section>
 	<section id="skill" class="p-skill">
 		<div class="p-skill__inner">
-			<div class="c-headline">
+			<div class="c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">SKILL</h2>
 				<p class="c-headline__subtitle">スキル</p>
 			</div>
 			<ul class="p-skill__list">
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#htmlIcon"/>
 					</svg>
@@ -95,7 +95,7 @@ get_header();
 						HTML
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#cssIcon"/>
 					</svg>
@@ -103,7 +103,7 @@ get_header();
 						CSS
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#jsIcon"/>
 					</svg>
@@ -111,7 +111,7 @@ get_header();
 						JavaScript
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#phpIcon"/>
 					</svg>
@@ -119,7 +119,7 @@ get_header();
 						PHP
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#rubyIcon"/>
 					</svg>
@@ -127,7 +127,7 @@ get_header();
 						Ruby
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#railsIcon"/>
 					</svg>
@@ -135,7 +135,7 @@ get_header();
 						Ruby on Rails
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#gitIcon"/>
 					</svg>
@@ -143,7 +143,7 @@ get_header();
 						git
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#githubIcon"/>
 					</svg>
@@ -151,7 +151,7 @@ get_header();
 						GitHub
 					</p>
 				</li>
-				<li class="p-skill__item">
+				<li class="p-skill__item u-smooth-trigger">
 					<svg class="p-skill__icon">
 						<use xlink:href="#awsIcon"/>
 					</svg>
@@ -164,7 +164,7 @@ get_header();
 	</section>
 	<section class="p-top-contact">
 		<div class="p-top-contact__inner">
-			<div class="c-headline">
+			<div class="c-headline u-smooth-trigger">
 				<h2 class="c-headline__title">CONTACT</h2>
 				<p class="c-headline__subtitle">お問い合わせ</p>
 			</div>
