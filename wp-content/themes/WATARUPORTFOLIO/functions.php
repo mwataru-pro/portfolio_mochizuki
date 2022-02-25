@@ -52,9 +52,9 @@ function my_wp_mail_smtp_custom_options ( $phpmailer ) {
 				'verify_peer' => false,
 				'verify_peer_name' => false,
 				'allow_self_signed' => true));
-			}
 		}
-		return $phpmailer;
+	}
+	return $phpmailer;
 }
 
 function sub_loop($number) {

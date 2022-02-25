@@ -44,4 +44,12 @@ jQuery(function () {
 	$(window).on('load', function(){
 		fadeAnimation();
 	});
+
+	$.ajax({
+		type: 'get',
+		url: 'wp-content/themes/WATARUPORTFOLIO/assets/img/svg/sprite.svg'
+	}).done(function(data) {
+		var svg = $(data).find('svg');
+		$('body').prepend(svg);
+	});
 });

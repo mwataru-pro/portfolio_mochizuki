@@ -80,12 +80,86 @@ get_header();
 			</p>
 		</div>
 	</section>
-	<section class="p-skill">
+	<section id="skill" class="p-skill">
 		<div class="p-skill__inner">
 			<div class="c-headline">
 				<h2 class="c-headline__title">SKILL</h2>
 				<p class="c-headline__subtitle">スキル</p>
 			</div>
+			<ul class="p-skill__list">
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#htmlIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						HTML
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#cssIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						CSS
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#jsIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						JavaScript
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#phpIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						PHP
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#rubyIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						Ruby
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#railsIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						Ruby on Rails
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#gitIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						git
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#githubIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						GitHub
+					</p>
+				</li>
+				<li class="p-skill__item">
+					<svg class="p-skill__icon">
+						<use xlink:href="#awsIcon"/>
+					</svg>
+					<p class="p-skill__skill-name">
+						Amazon Web Service
+					</p>
+				</li>
+			</ul>
 		</div>
 	</section>
 	<section class="p-top-contact">
