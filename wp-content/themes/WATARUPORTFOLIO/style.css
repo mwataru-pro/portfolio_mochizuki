@@ -124,6 +124,14 @@ Layout
 		z-index: 2;
 		transition: 0.3s;
 	}
+
+	.l-header__item {
+		padding: 10px;
+	}
+
+	.l-header__item {
+		display: block;
+	}
 }
 
 /* Hamburger
