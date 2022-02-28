@@ -689,6 +689,10 @@ Layout
 	.p-contact {
 		margin: 0 10px;
 	}
+
+	.p-top-button {
+		display: none;
+	}
 }
 
 @media (min-width: 426px) {
@@ -913,6 +917,59 @@ Layout
 	max-width: 300px;
 }
 
+.p-top-button {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 20;
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+.p-top-button__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 80px;
+}
+
+.p-top-button__text {
+	position: absolute;
+	bottom: 0;
+	line-height: 1;
+}
+
+.p-top-button.is-append {
+	animation: fadeUp 0.5s forwards;
+}
+
+.p-top-button.is-remove {
+	animation: fadeDown 0.5s forwards;
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeDown {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+}
+
 @media (min-width: 426px) {
 	.p-top-works__button {
 		max-width: 300px;
@@ -976,6 +1033,10 @@ Layout
 }
 
 .u-pc-none {
+	display: none;
+}
+
+.u-sp-none {
 	display: none;
 }
 

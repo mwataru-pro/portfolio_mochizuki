@@ -36,6 +36,20 @@ jQuery(function () {
 		});
 	}
 
+	function pageTopAnimation() {
+		const $topButton = $('#js-page-top')
+		const scroll =$(window).scrollTop();
+		if (scroll >= 200){
+			$topButton.removeClass('is-remove');
+			$topButton.addClass('is-append');
+		}else{
+			if($topButton.hasClass('is-append')){
+				$topButton.removeClass('is-append');
+				$topButton.addClass('is-remove');
+			}
+		}
+	}
+
 	function setImages() {
 		$.ajax({
 			type: 'get',
@@ -65,9 +79,17 @@ jQuery(function () {
 		$(window).on('load', function(){
 			vivusAnimation();
 			fadeAnimation();
+			pageTopAnimation();
 		});
 		$(window).scroll(function (){
 			fadeAnimation();
+			pageTopAnimation();
+		});
+		$('#js-page-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0//ページトップまでスクロール
+			}, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+			return false;//リンク自体の無効化
 		});
 		controlNav();
 		setImages();

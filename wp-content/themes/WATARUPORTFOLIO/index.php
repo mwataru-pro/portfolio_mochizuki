@@ -179,4 +179,10 @@ get_header();
 		</div>
 	</section>
 </main>
+<p id="js-page-top" class="p-top-button">
+	<a href="#" class="p-top-button__icon">
+		<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/drone.png')); ?>" alt="トップページボタン">
+		<span class="p-top-button__text">top page</span>
+	</a>
+</p>
 <?php get_footer(); ?>
