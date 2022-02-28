@@ -24,7 +24,6 @@ jQuery(function () {
 		};
 		init();
 	}
-	controlNav();
 
 	function fadeAnimation() {
 		$('.u-smooth-trigger').each(function() {
@@ -37,19 +36,45 @@ jQuery(function () {
 		});
 	}
 
-	$(window).scroll(function (){
-		fadeAnimation();
-	});
+	function setImages() {
+		$.ajax({
+			type: 'get',
+			url: 'wp-content/themes/WATARUPORTFOLIO/assets/img/svg/sprite.svg'
+		}).done(function(data) {
+			var svg = $(data).find('svg');
+			$('body').prepend(svg);
+		});
+	}
 
-	$(window).on('load', function(){
-		fadeAnimation();
-	});
 
-	$.ajax({
-		type: 'get',
-		url: 'wp-content/themes/WATARUPORTFOLIO/assets/img/svg/sprite.svg'
-	}).done(function(data) {
-		var svg = $(data).find('svg');
-		$('body').prepend(svg);
-	});
+	function vivusAnimation () {
+		new Vivus('js-svg-animation', {
+			file: 'wp-content/themes/WATARUPORTFOLIO/assets/img/wataru_portfolio.svg',
+			type: 'async',
+			duration: 300,
+			forceRender: false,
+			animTimingFunction: Vivus.EASE,
+			start: 'autostart'
+		},
+		function(obj){
+			obj.el.classList.add('is-draw');
+		});
+	}
+
+	function setEvent() {
+		$(window).on('load', function(){
+			vivusAnimation();
+			fadeAnimation();
+		});
+		$(window).scroll(function (){
+			fadeAnimation();
+		});
+		controlNav();
+		setImages();
+	}
+
+	function init() {
+		setEvent();
+	}
+	init();
 });

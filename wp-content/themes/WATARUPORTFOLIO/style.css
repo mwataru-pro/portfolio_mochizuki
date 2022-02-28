@@ -219,12 +219,27 @@ Layout
 	font-weight: bold;
 	line-height: 1;
 	text-align: center;
+	height: 160px;
 }
 
 .p-first-view__image {
 	max-width: 500px;
-	height: 420px;
+	height: 360px;
 	margin: auto;
+}
+
+.p-first-view__draw-stroke {
+	fill: none;
+	fill-opacity: 0;
+	stroke: #000;
+}
+
+#mask.is-draw .p-first-view__draw-stroke {
+	fill: #000;
+	fill-opacity: 1;
+	stroke: none;
+	stroke-opacity:0;
+    transition: stroke-opacity .4s;
 }
 
 @media (min-width: 980px) {
@@ -927,7 +942,7 @@ Layout
 ----------------------------------------------------------------*/
 .u-smooth{
 	animation-name: smoothAnime;
-	animation-duration:1s;
+	animation-duration:1.2s;
 	animation-fill-mode:forwards;
 	transform-origin: left;
 	opacity:0;

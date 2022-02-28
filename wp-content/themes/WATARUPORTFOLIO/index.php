@@ -9,7 +9,8 @@ get_header();
 ?>
 <div id="first-view" class="p-first-view">
 	<div class="p-first-view__inner">
-		<h2 class="p-first-view__title u-smooth-trigger">WATARU PORTFOLIO</h2>
+		<h2 id="js-svg-animation" class="p-first-view__title">
+		</h2>
 		<p class="p-first-view__image u-smooth-trigger">
 			<img src="<?php echo esc_url(get_theme_file_uri('/assets/img/first-view1.png')); ?>" alt="man illust">
 		</p>
