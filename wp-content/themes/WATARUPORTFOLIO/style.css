@@ -369,6 +369,9 @@ Layout
 	margin: auto 10px;
 }
 
+.p-work__headline {
+	flex-direction: column;
+}
 
 .p-work-cards {
 	margin-top: 60px;
@@ -566,6 +569,10 @@ Layout
 .p-contact__inner {
 	margin: auto;
 	max-width: 600px;
+}
+
+.p-contact__headline {
+	flex-direction: column;
 }
 
 .p-contact__form {
@@ -995,7 +1002,7 @@ Layout
 	}
 }
 
-/* Uni
+/* Utility
 ----------------------------------------------------------------*/
 .u-smooth{
 	animation-name: smoothAnime;

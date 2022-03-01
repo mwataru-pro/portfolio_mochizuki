@@ -2,7 +2,7 @@
 <main class="l-main">
 	<div class="p-contact">
 		<div class="p-contact__inner">
-			<div class="c-headline">
+			<div class="p-contact__headline c-headline">
 				<h2 class="c-headline__title">CONTACT</h2>
 				<p class="c-headline__subtitle">お問い合わせ</p>
 			</div>

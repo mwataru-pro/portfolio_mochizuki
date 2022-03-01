@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="p-work">
 	<div class="p-work__inner">
-		<div class="c-headline u-smooth-trigger">
+		<div class="p-work__headline c-headline">
 			<h2 class="c-headline__title">WORKS</h2>
 			<p class="c-headline__subtitle">制作実績</p>
 		</div>
