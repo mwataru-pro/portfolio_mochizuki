@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <div class="p-work">
 	<div class="p-work__inner">
-		<div class="p-work__headline c-headline">
+		<div class="p-work__headline c-headline u-smooth">
 			<h2 class="c-headline__title">WORKS</h2>
 			<p class="c-headline__subtitle">制作実績</p>
 		</div>
-		<ul class="p-work-cards">
+		<ul class="p-work-cards u-smooth">
 		<?php $my_query = sub_loop(6);
 		if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
-			<li class="p-work-card u-smooth-trigger">
+			<li class="p-work-card">
 				<a href="<?php the_permalink(); ?>" class="p-work-card__thumbnail">
 					<span class="c-link-mask">
 					<?php $work_thumbnail = get_field('work-thumbnail');
