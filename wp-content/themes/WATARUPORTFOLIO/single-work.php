@@ -3,7 +3,7 @@
 	<div class="p-production__inner">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<article>
-		<div class="p-production__title-wrap c-headline u-smooth">
+		<div class="p-production__title-wrap c-headline">
 			<h2 class="p-production__title c-headline__title">
 				<?php the_title(); ?>
 			</h2>
@@ -13,7 +13,7 @@
 				</a>
 			</p>
 		</div>
-		<div class="p-production__thumbnail u-smooth">
+		<div class="p-production__thumbnail">
 			<?php $work_thumbnail = get_field('work-thumbnail');
 			if($work_thumbnail){ ?>
 			<img
@@ -22,7 +22,7 @@
 			>
 			<?php } ?>
 		</div>
-		<div class="p-production__site-name u-smooth">
+		<div class="p-production__site-name">
 			<h3 class="p-production__headline">
 				<span class="u-underline-yellow">サイト名</span>
 			</h3>
@@ -30,7 +30,7 @@
 				<?php echo get_field('work-name'); ?>
 			</p>
 		</div>
-		<div class="p-production__making-time u-smooth">
+		<div class="p-production__making-time">
 			<h3 class="p-production__headline">
 				<span class="u-underline-yellow">制作期間</span>
 			</h3>
@@ -38,7 +38,7 @@
 				<?php echo get_field('work-making-time') ?>
 			</p>
 		</div>
-		<div class="p-production__tech u-smooth">
+		<div class="p-production__tech">
 			<h3 class="p-production__headline">
 				<span class="u-underline-yellow">使用技術</span>
 			</h3>
@@ -46,7 +46,7 @@
 				<?php echo get_field('work-tech'); ?>
 			</p>
 		</div>
-		<div class="p-production__summary u-smooth">
+		<div class="p-production__summary">
 			<h3 class="p-production__headline">
 				<span class="u-underline-yellow">制作内容</span>
 			</h3>

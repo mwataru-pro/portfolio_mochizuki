@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="p-work">
 	<div class="p-work__inner">
-		<div class="p-work__headline c-headline u-smooth">
+		<div class="p-work__headline c-headline">
 			<h2 class="c-headline__title">WORKS</h2>
 			<p class="c-headline__subtitle">制作実績</p>
 		</div>
-		<ul class="p-work-cards u-smooth">
+		<ul class="p-work-cards">
 		<?php $my_query = sub_loop(6);
 		if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
 			<li class="p-work-card">
