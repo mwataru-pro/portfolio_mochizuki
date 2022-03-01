@@ -2,6 +2,7 @@ jQuery(function () {
 	const $body = $("body");
 	const $header = $("#header");
 	const $toggleNav = $header.find(".js-nav");
+	const $navItem = $toggleNav.find(".l-header__item");
 	const $toggleBtn = $header.find(".js-open-button");
 
 	function controlNav() {
@@ -11,12 +12,22 @@ jQuery(function () {
 		noScroll();
 		};
 
+		function closeNav() {
+			$toggleNav.removeClass("is-open");
+			$toggleBtn.removeClass("is-open");
+		}
+
 		function noScroll() {
 			$body.toggleClass("no-scroll");
 		};
 
 		function setEvent() {
 			$toggleBtn.on("click", changeNav);
+			$navItem.on("click", function(){
+				if ($toggleNav.hasClass("is-open")) {
+					closeNav();
+				}
+			});
 		};
 
 		function init() {
